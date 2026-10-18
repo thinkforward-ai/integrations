@@ -83,9 +83,7 @@ integrations/
 1. **Pilot:** hello-world. Its standalone program and development tests exist.
    The sample declares the optional alias `hello`.
 2. **Implementation:** the shared skill, bootstrap resource, and hello-world
-   `SKILL.md` source files are created per the
-   [source-only task](tasks/implement-approved-integration-sources.md) and
-   validated in isolated fixtures. They are uncommitted and not deployed.
+   `SKILL.md` source files exist in their repositories. None is deployed.
 3. **Deployment:** no new tool, alias, bootstrap, or project capability mapping
    is installed. Existing Hub content, including `say`, is outside the pilot's
    modification scope.

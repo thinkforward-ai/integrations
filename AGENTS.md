@@ -21,7 +21,7 @@ named `integrations`; origin is `git@github.com:thinkforward-ai/integrations.git
 3. Keep the overview current when the project's understanding changes. Describe
    the current state, not a journal of events or conversation recaps. Keep
    historical context in decisions and original inputs.
-4. The project is AI-driven. Advance investigation and routine work without unnecessary questions, but obtain stakeholder approval for design decisions. The first integration is hello-world; Whisper is on hold. Q1's design and exact skill wording are approved in `decisions/20261018-2243-skill-led-integration-design.md`; source files are implemented but uncommitted; installation has not started.
+4. The project is AI-driven. Advance investigation and routine work without unnecessary questions, but obtain stakeholder approval for design decisions. The first integration is hello-world; Whisper is on hold. Q1's design and exact skill wording are approved in `decisions/20261018-2243-skill-led-integration-design.md`. The integration source files exist; nothing is installed.
 5. Keep credentials, tokens, and private configuration values out of the repository.
 6. Follow the per-tool-skill and Agent Hub ownership requirements in `overview.md`.
    Each tool skill must declare a dependency array. There is no shell-only
