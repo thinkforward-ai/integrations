@@ -3,7 +3,7 @@
 ## Project structure
 
 1. `README.md`: repository entry point.
-2. `overview.md`: current understanding of the project's purpose and scope.
+2. `overview.md`: current project statement, problem, scope, structure, and status.
 3. `roadmap.md`: agreed milestones and progress; no milestones are agreed yet.
 4. `open-issues.md`: unresolved issues only, with stable `Q<n>` identifiers.
 5. `inputs/`: original input artifacts, preserved unchanged after capture.
@@ -13,13 +13,15 @@
 ## Working with the project
 
 The project is named **Integrations**. Use integration as the primary term for
-an agent-facing blueprint. The local repository directory is `integrations`;
-the GitHub repository rename remains pending.
+an agent-facing blueprint. Both the local directory and GitHub repository are
+named `integrations`; origin is `git@github.com:thinkforward-ai/integrations.git`.
 
 1. Read the overview and relevant issues, decisions, and tasks before making changes.
 2. Keep provisional ideas distinct from accepted decisions. Do not infer approval.
-3. Keep the overview current when the project's understanding changes.
-4. The project is AI-driven. Advance investigation and routine work without unnecessary questions, but obtain stakeholder approval for design decisions. The first integration is hello-world; Whisper is on hold. Q1's design and exact skill wording are approved in `decisions/20261018-2243-skill-led-integration-design.md`; implementation and installation have not started.
+3. Keep the overview current when the project's understanding changes. Describe
+   the current state, not a journal of events or conversation recaps. Keep
+   historical context in decisions and original inputs.
+4. The project is AI-driven. Advance investigation and routine work without unnecessary questions, but obtain stakeholder approval for design decisions. The first integration is hello-world; Whisper is on hold. Q1's design and exact skill wording are approved in `decisions/20261018-2243-skill-led-integration-design.md`; source files are implemented but uncommitted; installation has not started.
 5. Keep credentials, tokens, and private configuration values out of the repository.
 6. Follow the per-tool-skill and Agent Hub ownership requirements in `overview.md`.
    Each tool skill must declare a dependency array. There is no shell-only
