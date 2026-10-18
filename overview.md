@@ -39,9 +39,13 @@ agent-hub/
     └── scripts/bootstrap.sh
 
 integrations/
-└── skills/hello-world/
-    ├── SKILL.md
-    └── scripts/hello-world.sh
+└── skills/
+    ├── hello-world/
+    │   ├── SKILL.md
+    │   └── scripts/hello-world.sh
+    └── say/
+        ├── SKILL.md
+        └── scripts/say.py
 ```
 
 1. Custom resources retain their relative paths under
@@ -54,6 +58,9 @@ integrations/
    required. Aliases are not inherited by child processes.
 4. Detailed metadata and exact skill text are specified in the
    [approved design](decisions/20261018-2243-skill-led-integration-design.md).
+5. Large downloaded artifacts, such as models, are not stored in Git. A tool
+   skill declares them as extra setup steps with pinned URLs and sha256 values;
+   see the [say design](decisions/20261018-2322-say-integration.md).
 
 ## Operating constraints
 
@@ -82,14 +89,15 @@ integrations/
 
 1. **Pilot:** hello-world. Its standalone program and development tests exist.
    The sample declares the optional alias `hello`.
-2. **Implementation:** the shared skill, bootstrap resource, and hello-world
-   `SKILL.md` source files exist in their repositories. None is deployed.
-3. **Deployment:** no new tool, alias, bootstrap, or project capability mapping
-   is installed. Existing Hub content, including `say`, is outside the pilot's
-   modification scope.
-4. **Whisper:** on hold. Its scope includes both English-only and multilingual
-   models, not just the recognition executable.
-5. **Milestones:** unresolved in
+2. **Say:** local voice-to-text with Whisper. Its program, development tests,
+   and skill exist; the skill downloads the multilingual base and Silero
+   speech-detection models. It declares the optional alias `say`.
+3. **Implementation:** the shared skill, bootstrap resource, and both tool
+   skills exist in their repositories. None is deployed.
+4. **Deployment:** no tool, alias, bootstrap, or project capability mapping
+   is installed. The Hub home contains no integration tools or aliases.
+5. **Other Whisper models:** on hold, including English-only models.
+6. **Milestones:** unresolved in
    [Q2](open-issues.md#q2-project-milestones); no milestones are agreed in the
    [roadmap](roadmap.md).
 

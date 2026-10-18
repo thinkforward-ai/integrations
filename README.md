@@ -6,10 +6,10 @@ An integration can combine tools, connectors, models, skills, configuration,
 scripts, aliases, and guidance. Examples include speech-to-text, cloud operations,
 image editing, and video editing.
 
-The first integration is a hello-world shell command, used to prove shared
-installation, shell aliases, and project capability mapping. Installation is
+The pilot integration is a hello-world shell command, used to prove shared
+installation, shell aliases, and project capability mapping. The `say`
+integration provides local voice-to-text with Whisper. Installation is
 skill-led, following shared conventions rather than a universal installer.
-Whisper is on hold.
 
 The installation workflow must explain planned changes, highlight major or
 critical security risks, and ask **Allow / Reject** before making changes.
@@ -26,11 +26,12 @@ stay OS-managed. Project capabilities are mapped onto integrations. There is
 no maintained installed-tool inventory or redundant bin command requirement.
 
 The [design and exact skill texts are approved](decisions/20261018-2243-skill-led-integration-design.md).
-Only the standalone hello-world program and its development tests exist so far.
-The skills and bootstrap have not been created or installed.
+The skills and bootstrap exist as source; none is installed.
 
-Development checks are available at `./tests/hello-world.sh`; the installation
-workflow does not run them automatically.
+Development checks are `./tests/hello-world.sh`, `./tests/say/test_say.sh`, and
+`python3 -m unittest discover -s tests/say`. The say checks need the models in
+the ignored `skills/say/models/`. The installation workflow does not run them
+automatically.
 
 ## Project records
 
