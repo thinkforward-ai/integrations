@@ -1,0 +1,1 @@
+Also important - some toolings might be installed globally in the system - git, az, glab and others. And it might be most common case - in such cases - there is no need to put anything into bin folder. Installation happens normally according to OS. Then Skill only navigates and registers it on the project level - maybe something else what is necessary

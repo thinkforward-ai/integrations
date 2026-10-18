@@ -1,0 +1,1 @@
+I changed my mind again. It is actually alias and does exactly that - maps command on tooling. Capability - is on the project level instead. So each project can list different added capabilities (cloud, version-control, etc.) - and map them on integrations available either globally or via agent-hub installed ones.

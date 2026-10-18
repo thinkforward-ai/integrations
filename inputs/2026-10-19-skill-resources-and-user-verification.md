@@ -1,0 +1,2 @@
+This belongs to installation skill: do not bypass
+        its preview, security-risk disclosure, or `Allow` / `Reject` gate. All resources should be mentioned in the metadata, not in the skill main body: Program: `scripts/hello-world.sh` . Leave verification to the user - do not run the tool itself silently after installation just to check it. roles do not fit capabilities domain - it starts messing with RBAC domain. do not use roles wording. just say capabilities are mapped onto integrations.

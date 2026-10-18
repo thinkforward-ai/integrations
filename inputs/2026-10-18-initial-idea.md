@@ -1,0 +1,1 @@
+I have created a new project - git@github.com:thinkforward-ai/plugins.git this will contain all different plugins and integrations for agents. I see it as a mix of skills and configurations and instructions/guidance/documentations. My plan is to first register a one first tooling - and we are going to develop more later.

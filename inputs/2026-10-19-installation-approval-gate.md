@@ -1,0 +1,1 @@
+One more addition - install-integration skill must first describe the installation - so it is clear for the user what is going to happen. Also highligh and mention any major or critical security risks of running the installation. And then must ask (gate) - Allow / Reject

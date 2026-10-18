@@ -1,0 +1,1 @@
+let's step back from whisper for a moment. Make a hello-world integration. Shell command which is called by aliace, this command is registered and installed. there is an installation process - maybe it is a skill.
