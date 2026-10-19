@@ -53,6 +53,10 @@ integrations/
 2. The reusable bootstrap is deployed as `bootstrap.sh` in Agent Hub home.
    It prepares PATH and alias expansion, then sources local `aliases.sh`
    when present. It must be sourced in the shell that invokes the alias.
+   Agent Hub's installer deploys it and adds a marked hook to `~/.bashrc`, so
+   new interactive Bash shells load it; scripts and agent tool shells source
+   it explicitly. See the
+   [bootstrap hook decision](decisions/20261019-0034-bootstrap-hook-in-bashrc.md).
 3. Selected shell aliases are local artifacts in `aliases.sh`, not separate
    command files. No empty default alias file or alias-management helper is
    required. Aliases are not inherited by child processes.
@@ -83,7 +87,8 @@ integrations/
    installed-tool inventory or duplicate alias registry.
 6. Preserve existing tools, aliases, user selections, and unrelated files.
    No redundant bin links or wrappers, new `.local`/`.config` storage, or shell
-   startup-file edits. Managed content stays within Hub or project directories;
+   startup-file edits other than Agent Hub's marked `~/.bashrc` bootstrap
+   hook. Managed content stays within Hub or project directories;
    native packages use OS locations.
 7. Implementation languages are unrestricted. The initial environment is
    Ubuntu/Bash; Windows support is deferred.
