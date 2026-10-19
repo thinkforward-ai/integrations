@@ -70,6 +70,13 @@ integrations/
 
 1. Installation is skill-led, without a universal installer. Shared policies
    belong in the installation skill, not repeated in each tool skill.
+   Installation includes the integration's agent-facing skills and supporting
+   resources in Agent Hub's shared `skills/` folder alongside its tooling,
+   reusing suitable installed components. Named skill additions or updates
+   belong in the installation plan and approval under the existing
+   skill-management safeguards. Completion requires the required skills to
+   be installed and tooling verification to pass; report partial installation
+   explicitly.
 2. Dependency and resource arrays are required metadata; use `[]` when empty.
    A native command is an OS executable name; a bundled command is an
    executable path relative to its resource root.
