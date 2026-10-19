@@ -19,10 +19,11 @@ named `integrations`; origin is `git@github.com:thinkforward-ai/integrations.git
 1. Read the overview and relevant issues, decisions, and tasks before making changes.
 2. Keep provisional ideas distinct from accepted decisions. Do not infer approval.
 3. Keep the overview current when the project's understanding changes. In
-   `AGENTS.md` and `overview.md`, state only the current state and definitions,
-   never event details such as commits, pushes, task provenance, validation
-   runs, or conversation recaps. Keep historical context in decisions and
-   original inputs.
+   `AGENTS.md`, `overview.md`, and `README.md`, state only the current state
+   and definitions, never event details such as commits, pushes, task
+   provenance, validation runs, or conversation recaps. Keep historical
+   context in decisions and original inputs. Current status lives only in the
+   overview's status section.
 4. The project is AI-driven. Advance investigation and routine work without unnecessary questions, but obtain stakeholder approval for design decisions. The integrations are hello-world, the pilot, and say; other Whisper models are on hold. Q1's design and exact skill wording are approved in `decisions/20261018-2243-skill-led-integration-design.md`. The say design is in `decisions/20261018-2322-say-integration.md`. Guided installation until the integration works is in `decisions/20261019-0014-guided-installation-until-working.md`. Agent Hub's installer adds a marked bootstrap hook to `~/.bashrc` per `decisions/20261019-0034-bootstrap-hook-in-bashrc.md`; no other startup-file edits are allowed. Both integrations are installed in the local Agent Hub home, and the user confirmed both work.
 5. Keep credentials, tokens, and private configuration values out of the repository.
 6. Follow the per-tool-skill and Agent Hub ownership requirements in `overview.md`.
