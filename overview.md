@@ -105,6 +105,7 @@ integrations/
 4. **Deployment:** hello-world and say, the bootstrap, and the `hello` and
    `say` aliases are installed in the local Agent Hub home, with say's native
    `whisper.cpp` dependency. The user confirmed both work. No project capability mapping exists.
+   Agent Hub's installer implements the marked `~/.bashrc` hook.
 5. **Other Whisper models:** on hold, including English-only models.
 6. **Milestones:** unresolved in
    [Q2](open-issues.md#q2-project-milestones); no milestones are agreed in the

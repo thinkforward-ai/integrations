@@ -26,7 +26,6 @@ stay OS-managed. Project capabilities are mapped onto integrations. There is
 no maintained installed-tool inventory or redundant bin command requirement.
 
 The [design and exact skill texts are approved](decisions/20261018-2243-skill-led-integration-design.md).
-The skills and bootstrap exist as source; none is installed.
 
 Development checks are `./tests/hello-world.sh`, `./tests/say/test_say.sh`, and
 `python3 -m unittest discover -s tests/say`. The say checks need the models in
