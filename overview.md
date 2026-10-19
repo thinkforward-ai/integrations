@@ -76,12 +76,13 @@ integrations/
 3. Installation requires a clear plan, disclosure of major or critical
    security risks, and an explicit `Allow` / `Reject` gate before changes.
    Material changes to the plan or risks require fresh approval.
-4. Functional verification is user-run. Installation and discovery do not
-   automatically execute tools, aliases, smoke tests, or self-tests.
-   Command/file presence is not proof of functional readiness. Installation
-   guides the user one step at a time until the user confirms the integration
-   works; see the
-   [guided installation decision](decisions/20261019-0014-guided-installation-until-working.md).
+4. Agents run functional verification after installation and report the
+   result; user-run steps are the fallback and enable use outside the agent.
+   Discovery does not execute tools. Command/file presence is not proof of
+   functional readiness. Installation continues one step at a time until
+   verification passes; see the
+   [guided installation decision](decisions/20261019-0014-guided-installation-until-working.md)
+   and the [agent-run verification decision](decisions/20261019-0052-agent-run-verification.md).
 5. Discovery uses metadata, command locations, and files without executing
    integration commands or changing configuration. There is no maintained
    installed-tool inventory or duplicate alias registry.

@@ -42,6 +42,7 @@ metadata:
    `--max-duration`, and `--device`. Esc finishes and transcribes; Ctrl+C
    cancels. `--help` prints usage. No audio files are written.
 
-4. User-run verification: with this integration selected for `say`,
-   `say --help` should print usage; `say`, followed by a short spoken
-   sentence and a pause, should print that sentence as text.
+4. Verification: the agent runs `say --help` (expect usage). For the spoken
+   check, the agent runs `say` while the user speaks a short sentence and
+   pauses (expect that sentence as text); if the agent's shell cannot reach
+   the microphone, the user runs it.

@@ -21,6 +21,6 @@ metadata:
 
 2. Usage: accepts an optional name; `--help` prints usage.
 
-3. User-run verification: with this integration selected for `hello`,
-   `hello` should print `Hello, world!`; `hello Ada` should print
-   `Hello, Ada!`.
+3. Verification: the agent runs `hello` (expect `Hello, world!`) and
+   `hello Ada` (expect `Hello, Ada!`); the user may run the same outside the
+   agent.

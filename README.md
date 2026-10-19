@@ -13,7 +13,8 @@ skill-led, following shared conventions rather than a universal installer.
 
 The installation workflow must explain planned changes, highlight major or
 critical security risks, and ask **Allow / Reject** before making changes.
-It leaves verification to the user rather than automatically running the tool.
+Agents run verification; user-run steps are the fallback and enable use
+outside the agent.
 
 Each tool has its own installation skill, a declared dependency array, and
 all resources listed in metadata. Supporting scripts are optional.

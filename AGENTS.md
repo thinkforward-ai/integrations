@@ -35,8 +35,8 @@ named `integrations`; origin is `git@github.com:thinkforward-ai/integrations.git
    installation changes. See `decisions/20261018-2204-installation-approval-gate.md`.
 8. Keep shared approval rules in the installation skill, not repeated in tool
    skills. Declare all tool resources in metadata. Guide the user step by
-   step until the integration works; verification stays user-run, so do not
-   automatically run installed tools to check them. Describe
+   step until the integration works; agents run verification, and user-run
+   steps are the fallback and enable use outside the agent. Describe
    project capabilities as mapped onto integrations.
 9. Follow the accepted design in
    `decisions/20261018-2243-skill-led-integration-design.md` where it supersedes
