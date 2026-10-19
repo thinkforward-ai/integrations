@@ -74,7 +74,10 @@ integrations/
    Material changes to the plan or risks require fresh approval.
 4. Functional verification is user-run. Installation and discovery do not
    automatically execute tools, aliases, smoke tests, or self-tests.
-   Command/file presence is not proof of functional readiness.
+   Command/file presence is not proof of functional readiness. Installation
+   guides the user one step at a time until the user confirms the integration
+   works; see the
+   [guided installation decision](decisions/20261019-0014-guided-installation-until-working.md).
 5. Discovery uses metadata, command locations, and files without executing
    integration commands or changing configuration. There is no maintained
    installed-tool inventory or duplicate alias registry.
@@ -93,9 +96,10 @@ integrations/
    and skill exist; the skill downloads the multilingual base and Silero
    speech-detection models. It declares the optional alias `say`.
 3. **Implementation:** the shared skill, bootstrap resource, and both tool
-   skills exist in their repositories. None is deployed.
-4. **Deployment:** no tool, alias, bootstrap, or project capability mapping
-   is installed. The Hub home contains no integration tools or aliases.
+   skills exist in their repositories.
+4. **Deployment:** hello-world and say, the bootstrap, and the `hello` and
+   `say` aliases are installed in the local Agent Hub home, with say's native
+   `whisper.cpp` dependency. The user confirmed both work. No project capability mapping exists.
 5. **Other Whisper models:** on hold, including English-only models.
 6. **Milestones:** unresolved in
    [Q2](open-issues.md#q2-project-milestones); no milestones are agreed in the

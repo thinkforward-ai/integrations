@@ -23,7 +23,7 @@ named `integrations`; origin is `git@github.com:thinkforward-ai/integrations.git
    never event details such as commits, pushes, task provenance, validation
    runs, or conversation recaps. Keep historical context in decisions and
    original inputs.
-4. The project is AI-driven. Advance investigation and routine work without unnecessary questions, but obtain stakeholder approval for design decisions. The integrations are hello-world, the pilot, and say; other Whisper models are on hold. Q1's design and exact skill wording are approved in `decisions/20261018-2243-skill-led-integration-design.md`. The say design is in `decisions/20261018-2322-say-integration.md`. No integration is installed.
+4. The project is AI-driven. Advance investigation and routine work without unnecessary questions, but obtain stakeholder approval for design decisions. The integrations are hello-world, the pilot, and say; other Whisper models are on hold. Q1's design and exact skill wording are approved in `decisions/20261018-2243-skill-led-integration-design.md`. The say design is in `decisions/20261018-2322-say-integration.md`. Guided installation until the integration works is in `decisions/20261019-0014-guided-installation-until-working.md`. Both integrations are installed in the local Agent Hub home, and the user confirmed both work.
 5. Keep credentials, tokens, and private configuration values out of the repository.
 6. Follow the per-tool-skill and Agent Hub ownership requirements in `overview.md`.
    Each tool skill must declare a dependency array. There is no shell-only
@@ -34,8 +34,9 @@ named `integrations`; origin is `git@github.com:thinkforward-ai/integrations.git
    Proceed only after explicit `Allow`; rejection or cancellation makes no
    installation changes. See `decisions/20261018-2204-installation-approval-gate.md`.
 8. Keep shared approval rules in the installation skill, not repeated in tool
-   skills. Declare all tool resources in metadata. Leave verification to the
-   user; do not automatically run installed tools to check them. Describe
+   skills. Declare all tool resources in metadata. Guide the user step by
+   step until the integration works; verification stays user-run, so do not
+   automatically run installed tools to check them. Describe
    project capabilities as mapped onto integrations.
 9. Follow the accepted design in
    `decisions/20261018-2243-skill-led-integration-design.md` where it supersedes
