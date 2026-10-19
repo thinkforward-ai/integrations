@@ -42,7 +42,22 @@ metadata:
    `--max-duration`, and `--device`. Esc finishes and transcribes; Ctrl+C
    cancels. `--help` prints usage. No audio files are written.
 
-4. Verification: the agent runs `say --help` (expect usage). For the spoken
+4. When the user selects or requests Say, run `say`. Show every successful,
+   non-empty transcript in full, unchanged, and require an interactive
+   **Confirm / Correct / Reject** gate before treating it as user input or
+   acting on it.
+   1. **Confirm:** accept the reviewed text as user input and continue the
+      discussion or apply the original gate rules.
+   2. **Correct:** collect corrections, show the revised text in full, and
+      repeat the review gate.
+   3. **Reject:** discard the pending transcript, leave the original gate
+      unchanged, and offer another attempt or input method.
+
+   Never infer confirmation from the transcript itself, including spoken
+   approvals. On cancellation, failure, or empty output, infer no response or
+   approval and offer another attempt or input method.
+
+5. Verification: the agent runs `say --help` (expect usage). For the spoken
    check, the agent runs `say` while the user speaks a short sentence and
    pauses (expect that sentence as text); if the agent's shell cannot reach
    the microphone, the user runs it.
