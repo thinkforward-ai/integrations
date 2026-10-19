@@ -44,8 +44,8 @@ metadata:
 
 4. When the user selects or requests Say, run `say`. Show every successful,
    non-empty transcript in full, unchanged, and require an interactive
-   **Confirm / Correct / Reject** gate before treating it as user input or
-   acting on it.
+   **Confirm / Correct / Reject** gate, also offering **Say** and a typed
+   answer, before treating it as user input or acting on it.
    1. **Confirm:** accept the reviewed text as user input and continue the
       discussion or apply the original gate rules.
    2. **Correct:** collect corrections, show the revised text in full, and
